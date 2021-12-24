@@ -13,7 +13,7 @@ module.exports = {
     try {
         if (!serverQueue) return message.channel.send('There is nothing playing.');
         if (message.guild.me.voice.channel !== message.member.voice.channel) {
-            return message.channel.send(" You Have To Be In The Same Channel With The Bot! ");
+            return message.channel.send(" You have to be in the aame channel with the Bot! ");
         }
         if (!serverQueue.loop) {
             serverQueue.loop = true;
