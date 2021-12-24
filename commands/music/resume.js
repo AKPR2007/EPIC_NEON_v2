@@ -11,7 +11,7 @@ module.exports = {
         if (!channel) return message.channel.send('I\'m sorry but you need to be in a voice channel to resume music!');
         const serverQueue = ops.queue.get(message.guild.id);
         if (message.guild.me.voice.channel !== message.member.voice.channel) {
-            return message.channel.send("**You Have To Be In The Same Channel With The Bot!**");
+            return message.channel.send("**You have to be in the same channel with the Bot!**");
         }
       try {
         if (serverQueue && !serverQueue.playing) {
