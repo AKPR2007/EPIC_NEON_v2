@@ -61,9 +61,9 @@ client.on("message", async message => {
         .setDescription(`Hey **${message.author.username},** I was made by <@${developerID}> 
 
         Bot Prefix: \`${prefix}\`
-        Invite Link: [Click Here](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands)
+        Invite Link: [Click Here](https://discord.com/api/oauth2/authorize?client_id=922379016407748618&permissions=140160532416&scope=bot)
 
-        :question: Still need help? [Click Here](https://discord.gg/gU7XAxTpX5) to join server
+        :question: Want to chill and hang out? [Click Here](https://discord.gg/tfJ4pPCeby) to join server
         `)
         .setThumbnail(client.user.displayAvatarURL())
         .setColor("#006732")
