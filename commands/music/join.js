@@ -14,13 +14,13 @@ module.exports = {
         if (!channel.permissionsFor(bot.user).has(['CONNECT', 'SPEAK', 'VIEW_CHANNEL'])) {
             return message.channel.send(" Missing Voice Permissions! ");
         };
-        if (message.guild.me.voice.channel) return message.channel.send('❌  Bot is Already In The VC! ');
+        if (message.guild.me.voice.channel) return message.channel.send('❌  Bot is already in the VC! ');
       
         if (serverQueue || serverQueue.playing) {
-          return message.channel.send(" Cannot Join Another VC While Playing! ")
+          return message.channel.send(" Cannot join another VC while playing! ")
         }
         await channel.join();
-        return message.channel.send(" ✅ Joined The Voice Channel! ")
+        return message.channel.send(" ✅ Joined the VC! ")
       } catch {
           serverQueue.connection.dispatcher.end();
           return message.channel.send(" Something Went Wrong, Please Try Again! ");
