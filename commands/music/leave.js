@@ -14,15 +14,15 @@ try {
         if (!channel.permissionsFor(bot.user).has(['CONNECT', 'SPEAK', 'VIEW_CHANNEL'])) {
             return message.channel.send(" Missing Voice Permissions! ");
         };
-        if (!message.guild.me.voice.channel) return message.channel.send('❌  Bot is Not In A VC! ');
+        if (!message.guild.me.voice.channel) return message.channel.send('❌  Bot is not in a VC! ');
 
         if (serverQueue || serverQueue.playing) {
           serverQueue.connection.dispatcher.end();
           await channel.leave();
-          return message.channel.send(" ✅ Left The Voice Channel! ");
+          return message.channel.send(" ✅ Left the VC! ");
         } else {
         await channel.leave();
-        return message.channel.send(" ✅ Left The Voice Channel! ");
+        return message.channel.send(" ✅ Left the VC! ");
         }
       } catch {
           serverQueue.connection.dispatcher.end();
