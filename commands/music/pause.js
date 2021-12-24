@@ -12,14 +12,14 @@ module.exports = {
       try {
         if (!channel) return message.channel.send('I\'m sorry but you need to be in a voice channel to pause music!');
         if (message.guild.me.voice.channel !== message.member.voice.channel) {
-            return message.channel.send(" You Have To Be In The Same Channel With The Bot! ");
+            return message.channel.send(" You have to be in the same channel with the Bot! ");
         };
         if (serverQueue && serverQueue.playing) {
             serverQueue.playing = false;
             serverQueue.connection.dispatcher.pause(true);
             return message.channel.send(' Paused  ⏸');
         }
-        return message.channel.send(':cross-mark: There is Nothing Playing! ');
+        return message.channel.send(':cross-mark: There is nothing playing! ');
       } catch {
           serverQueue.connection.dispatcher.end();
           await channel.leave();
